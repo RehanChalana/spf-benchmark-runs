@@ -1,0 +1,523 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/assert_java.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/jayhorn-recursive/SatGcd
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.UQgKRA/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-Vx3oLQG2PK/jpf-symbc/lib:
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 3cfe5d6c111a4d066ceeeaef768eda96c793ca07) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/15/25 1:10 PM
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:22)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.gcd(Main.java:18)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.gcd(Main.java:24)
+	at Main.main(Main.java:36)
+
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:05:44
+states:             new=129,visited=0,backtracked=129,end=33
+search:             maxDepth=13,constraints=32
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=64
+heap:               new=470,released=309,maxLive=458,gcCycles=35
+instructions:       7711
+max memory:         232MB
+loaded code:        classes=85,methods=1829
+
+====================================================== search finished: 6/15/25 1:16 PM
+SAFE
