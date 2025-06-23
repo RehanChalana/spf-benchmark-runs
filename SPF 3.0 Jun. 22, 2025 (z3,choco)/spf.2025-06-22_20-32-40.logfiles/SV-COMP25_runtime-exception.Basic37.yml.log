@@ -1,0 +1,1453 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/securibench/micro ../../sv-benchmarks/java/securibench/Basic37
+
+
+--------------------------------------------------------------------------------
+
+
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+/tmp/jpf-benchmark.qp95Bq/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-dx88J72lU9/jpf-symbc/lib:
+Running Symbolic PathFinder ...
+symbolic.dp=[z3, choco]
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 4d2d417b713391c923fcff22fc7ee9a8fd986a41) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/22/25 9:49 PM
+New sym int string0.length min=-2147483648, max=2147483647
+New sym int Length_0_ min=0, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+CONST_0 >= Length_0_ -> true
+
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+CONST_0 >= Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+CONST_0 < Length_0_ -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+CONST_0 < Length_0_
+New sym int CharAt(CONST_0)_1_ min=0, max=65535
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+CharAt(CONST_0)_1_ > CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+CharAt(CONST_0)_1_ > CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_2_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+IndexOf_2_ >= CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:5 sat:5 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+IndexOf_2_ >= CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:6 sat:6 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 >= Length_0_ &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:7 sat:6 unsat:1
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:8 sat:7 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:9 sat:8 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 >= Length_0_ &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:10 sat:8 unsat:2
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 >= Length_0_ &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:11 sat:8 unsat:3
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:12 sat:9 unsat:3
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:13 sat:9 unsat:4
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:14 sat:10 unsat:4
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_3_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+IndexOf_3_ < CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:15 sat:11 unsat:4
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+IndexOf_3_ < CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:16 sat:12 unsat:4
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:17 sat:13 unsat:4
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+CONST_0 >= Length_0_ &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:18 sat:13 unsat:5
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:19 sat:14 unsat:5
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:20 sat:14 unsat:6
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:21 sat:15 unsat:6
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 4
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_4_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+IndexOf_4_ >= CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:22 sat:16 unsat:6
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 5
+IndexOf_4_ >= CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:23 sat:17 unsat:6
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+CONST_0 >= Length_0_ &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:24 sat:17 unsat:7
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:25 sat:18 unsat:7
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:26 sat:19 unsat:7
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+CONST_0 >= Length_0_ &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:27 sat:19 unsat:8
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+CONST_0 >= Length_0_ &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:28 sat:19 unsat:9
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:29 sat:20 unsat:9
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:30 sat:20 unsat:10
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:31 sat:21 unsat:10
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 5
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_5_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+IndexOf_5_ < CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:32 sat:22 unsat:10
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 6
+IndexOf_5_ < CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:33 sat:23 unsat:10
+
+string analysis: SPC # = 1
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:34 sat:24 unsat:10
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+CONST_0 >= Length_0_ &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:35 sat:24 unsat:11
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:36 sat:25 unsat:11
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:37 sat:25 unsat:12
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:38 sat:26 unsat:12
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 6
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_6_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+IndexOf_6_ >= CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:39 sat:27 unsat:12
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 7
+IndexOf_6_ >= CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:40 sat:28 unsat:12
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_0 >= Length_0_ &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:41 sat:28 unsat:13
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:42 sat:29 unsat:13
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:43 sat:30 unsat:13
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_0 >= Length_0_ &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:44 sat:30 unsat:14
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_0 >= Length_0_ &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:45 sat:30 unsat:15
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:46 sat:31 unsat:15
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:47 sat:31 unsat:16
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:48 sat:32 unsat:16
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 7
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_7_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_ < CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:49 sat:33 unsat:16
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_ < CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:50 sat:34 unsat:16
+
+string analysis: SPC # = 2
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:51 sat:35 unsat:16
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+CONST_0 >= Length_0_ &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:52 sat:35 unsat:17
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:53 sat:36 unsat:17
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:54 sat:36 unsat:18
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:55 sat:37 unsat:18
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_8_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:56 sat:38 unsat:18
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:57 sat:39 unsat:18
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+CONST_0 >= Length_0_ &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:58 sat:39 unsat:19
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:59 sat:40 unsat:19
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:60 sat:41 unsat:19
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+CONST_0 >= Length_0_ &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:61 sat:41 unsat:20
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+CONST_0 >= Length_0_ &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:62 sat:41 unsat:21
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:63 sat:42 unsat:21
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+CharAt(CONST_0)_1_ > CONST_9 &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> false
+
+### PCs: total:64 sat:42 unsat:22
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:65 sat:43 unsat:22
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+New sym int IndexOf_9_ min=-1, max=30
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+IndexOf_9_ < CONST_0 &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:66 sat:44 unsat:22
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 10
+IndexOf_9_ < CONST_0 &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+IndexOf_9_ >= CONST_0 &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:67 sat:45 unsat:22
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 10
+IndexOf_9_ >= CONST_0 &&
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at java.util.StringTokenizer.scanToken(StringTokenizer.java:275)
+	at java.util.StringTokenizer.nextToken(StringTokenizer.java:351)
+	at securibench.micro.basic.Basic37.doGet(Basic37.java:32)
+	at Main.main(Main.java:23)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ < CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_[-1] < CONST_0 &&
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1]
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+CONST_1 >= Length_0_ &&
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:68 sat:46 unsat:22
+
+string analysis: SPC # = 3
+(.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 10
+CONST_1 >= Length_0_ &&
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+Using solver: ProblemZ3
+numeric PC: constraint # = 10
+CONST_1 < Length_0_ &&
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+### PCs: total:69 sat:47 unsat:22
+
+string analysis: SPC # = 3
+(.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 10
+CONST_1 < Length_0_ &&
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at java.util.StringTokenizer.skipDelimiters(StringTokenizer.java:249)
+	at java.util.StringTokenizer.hasMoreTokens(StringTokenizer.java:323)
+	at securibench.micro.basic.Basic37.doGet(Basic37.java:30)
+	at Main.main(Main.java:23)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+IndexOf_8_ >= CONST_0 &&
+IndexOf_7_ >= CONST_0 &&
+IndexOf_6_ < CONST_0 &&
+IndexOf_5_ >= CONST_0 &&
+IndexOf_4_ < CONST_0 &&
+IndexOf_3_ >= CONST_0 &&
+IndexOf_2_ < CONST_0 &&
+CharAt(CONST_0)_1_ <= CONST_9 &&
+CONST_0 < Length_0_ -> true
+
+string analysis: SPC # = 3
+(.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 9
+IndexOf_8_[0] >= CONST_0 &&
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1]
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1] -> true
+
+string analysis: SPC # = 3
+(.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0[**UNDEFINED**])(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1]
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1] -> true
+
+### PCs: total:70 sat:48 unsat:22
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] contains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1]
+--------->property violated
+pc 8 constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1]
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1] -> true
+
+string analysis: SPC # = 3
+(.substring[(string0)(CONST_0)(CONST_0)] contains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>) && (.substring[(string0)(CONST_0)(CONST_0)] notcontains CONST_<bad/>)
+NPC constraint # = 8
+IndexOf_7_[0] >= CONST_0 &&
+IndexOf_6_[-1] < CONST_0 &&
+IndexOf_5_[0] >= CONST_0 &&
+IndexOf_4_[-1] < CONST_0 &&
+IndexOf_3_[0] >= CONST_0 &&
+IndexOf_2_[-1] < CONST_0 &&
+CharAt(CONST_0)_1_[0] <= CONST_9 &&
+CONST_0 < Length_0_[1]
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic37.doGet(Basic37.java:32)
+	at Main.main(Main.java:23)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at mockx.servlet.http.HttpServletResponse.checkNoSymbolic(HttpServletResponse.java:38)
+	at mockx.servlet.http.HttpServletResponse.access$000(HttpServletResponse.java:12)
+	at mockx.servlet.http.HttpServletResponse$1.println(HttpServletResponse.java:22)
+	at securibench.micro.basic.Basic37.doGet(Basic37.java:32)
+	at Main.main(Main.java:23)
+
+
+====================================================== Method Sequences
+[]
+[(expected = java.lang.AssertionError.class), ##EXCEPTION## "java.lang.AssertionError..."]
+
+====================================================== JUnit 4.0 test class
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class Test {
+
+	private  ;
+
+	@Before
+	public void setUp() throws Exception {
+		 = new ();
+	}
+
+	public void test0() {
+	}
+
+	@Test(expected = java.lang.AssertionError.class)
+	public void test1() {
+		//should lead to ##EXCEPTION## "java.lang.AssertionError..."
+	}
+}
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at mockx.servlet.http.Ht..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=15,visited=0,backtracked=3,end=0
+search:             maxDepth=13,constraints=2
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=12
+heap:               new=593,released=37,maxLive=542,gcCycles=14
+instructions:       8247
+max memory:         232MB
+loaded code:        classes=108,methods=2044
+
+====================================================== search finished: 6/22/25 9:49 PM
+UNSAFE

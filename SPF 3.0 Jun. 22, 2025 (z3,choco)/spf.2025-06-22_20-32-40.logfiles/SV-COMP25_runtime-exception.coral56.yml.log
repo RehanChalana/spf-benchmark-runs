@@ -1,0 +1,92 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/float-nonlinear-calculation/coral56 ../../sv-benchmarks/java/float-nonlinear-calculation/common
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.H3lz6g/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-dx88J72lU9/jpf-symbc/lib:
+Running Symbolic PathFinder ...
+symbolic.dp=[z3, choco]
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 4d2d417b713391c923fcff22fc7ee9a8fd986a41) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/22/25 9:53 PM
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+double1 != CONST_0.0 -> false
+
+### PCs: total:1 sat:0 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 0
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+double1 == CONST_0.0 -> false
+
+### PCs: total:2 sat:0 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 0
+
+====================================================== Method Sequences
+[]
+
+====================================================== JUnit 4.0 test class
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class Test {
+
+	private  ;
+
+	@Before
+	public void setUp() throws Exception {
+		 = new ();
+	}
+
+	public void test0() {
+	}
+}
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=3,visited=0,backtracked=3,end=0
+search:             maxDepth=2,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=1
+heap:               new=485,released=24,maxLive=0,gcCycles=1
+instructions:       6481
+max memory:         232MB
+loaded code:        classes=86,methods=1904
+
+====================================================== search finished: 6/22/25 9:53 PM
+SAFE

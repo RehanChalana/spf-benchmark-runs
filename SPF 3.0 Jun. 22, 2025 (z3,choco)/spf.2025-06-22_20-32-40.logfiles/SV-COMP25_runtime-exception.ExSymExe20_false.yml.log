@@ -1,0 +1,211 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/jpf-regression/ExSymExe20_false
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.844wLq/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-dx88J72lU9/jpf-symbc/lib:
+Running Symbolic PathFinder ...
+symbolic.dp=[z3, choco]
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 4d2d417b713391c923fcff22fc7ee9a8fd986a41) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/22/25 9:41 PM
+New sym int int0 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 >= CONST_0 -> true
+
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0 >= CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 < CONST_0 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0 < CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 < CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0[-1] < CONST_0
+New sym int int1 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int1 >= CONST_0 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int1 >= CONST_0 &&
+int0 >= CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int1 < CONST_0 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int1 < CONST_0 &&
+int0 >= CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int1 < CONST_0 &&
+int0 >= CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int1[-1] < CONST_0 &&
+int0[0] >= CONST_0
+Testing ExSymExe20
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+%NonLinInteger% ((int1 % CONST_9) + (int0 % CONST_3)) < ((int1 % CONST_9) - CONST_3) &&
+int1 >= CONST_0 &&
+int0 >= CONST_0 -> false
+
+### PCs: total:5 sat:4 unsat:1
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+%NonLinInteger% ((int1 % CONST_9) + (int0 % CONST_3)) >= ((int1 % CONST_9) - CONST_3) &&
+int1 >= CONST_0 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:6 sat:5 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+%NonLinInteger% ((int1 % CONST_9) + (int0 % CONST_3)) >= ((int1 % CONST_9) - CONST_3) &&
+int1 >= CONST_0 &&
+int0 >= CONST_0
+branch FOO1
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+%NonLinInteger% ((int1 % CONST_9) - CONST_3) < ((int1 % CONST_9) + (int0 % CONST_3)) &&
+int1 >= CONST_0 &&
+int0 >= CONST_0 -> true
+
+### PCs: total:7 sat:6 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 3
+%NonLinInteger% ((int1 % CONST_9) - CONST_3) < ((int1 % CONST_9) + (int0 % CONST_3)) &&
+int1 >= CONST_0 &&
+int0 >= CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 3
+%NonLinInteger% ((int1 % CONST_9) - CONST_3) >= ((int1 % CONST_9) + (int0 % CONST_3)) &&
+int1 >= CONST_0 &&
+int0 >= CONST_0 -> false
+
+### PCs: total:8 sat:6 unsat:2
+
+--------->property violated
+pc 2 constraint # = 2
+int1 >= CONST_0 &&
+int0 >= CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int1 >= CONST_0 &&
+int0 >= CONST_0 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int1[0] >= CONST_0 &&
+int0[0] >= CONST_0
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError
+	at Main.test(Main.java:61)
+	at Main.main(Main.java:43)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.test(Main.java:61)
+	at Main.main(Main.java:43)
+
+
+====================================================== Method Sequences
+[]
+[(expected = java.lang.AssertionError.class), ##EXCEPTION## "java.lang.AssertionError..."]
+
+====================================================== JUnit 4.0 test class
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class Test {
+
+	private  ;
+
+	@Before
+	public void setUp() throws Exception {
+		 = new ();
+	}
+
+	public void test0() {
+	}
+
+	@Test(expected = java.lang.AssertionError.class)
+	public void test1() {
+		//should lead to ##EXCEPTION## "java.lang.AssertionError..."
+	}
+}
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError  at Main.test(Main.java:6..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=5,visited=0,backtracked=2,end=2
+search:             maxDepth=3,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=2
+heap:               new=491,released=31,maxLive=459,gcCycles=4
+instructions:       6467
+max memory:         232MB
+loaded code:        classes=89,methods=1870
+
+====================================================== search finished: 6/22/25 9:41 PM
+UNSAFE

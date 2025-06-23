@@ -1,0 +1,95 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/runtime-exception.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/juliet-java/testcasesupport ../../sv-benchmarks/java/juliet-java/CWE369_Divide_by_Zero__float_connect_tcp_divide_01_bad
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.afr63M/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-dx88J72lU9/jpf-symbc/lib:
+Running Symbolic PathFinder ...
+symbolic.dp=[z3, choco]
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 4d2d417b713391c923fcff22fc7ee9a8fd986a41) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/22/25 9:47 PM
+--------->property violated
+
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.UnsatisfiedLinkError: cannot find native java.net.InetAddress.init
+	at java.net.InetAddress.init(no peer)
+	at java.net.InetAddress.<clinit>(InetAddress.java:301)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:220)
+	at java.net.Socket.<init>(Socket.java:229)
+	at Main.bad(Main.java:53)
+	at Main.main(Main.java:205)
+
+
+====================================================== snapshot #1
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  owned locks:java.lang.Class@1ee
+  call stack:
+	at java.net.InetAddress.<clinit>(InetAddress.java:301)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:220)
+	at java.net.Socket.<init>(Socket.java:229)
+	at Main.bad(Main.java:53)
+	at Main.main(Main.java:205)
+
+
+====================================================== Method Sequences
+
+====================================================== JUnit 4.0 test class
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+public class Test {
+
+	private  ;
+
+	@Before
+	public void setUp() throws Exception {
+		 = new ();
+	}
+}
+
+====================================================== results
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.UnsatisfiedLinkError: cannot find native..."
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=1,visited=0,backtracked=0,end=0
+search:             maxDepth=1,constraints=0
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=0
+heap:               new=566,released=0,maxLive=0,gcCycles=0
+instructions:       6770
+max memory:         232MB
+loaded code:        classes=98,methods=1994
+
+====================================================== search finished: 6/22/25 9:47 PM
+UNKNOWN

@@ -1,0 +1,142 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/assert_java.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/jdart-regression/shifting3
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.ue3ixA/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-dx88J72lU9/jpf-symbc/lib:
+Running Symbolic PathFinder ...
+symbolic.dp=[z3, choco]
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev 4d2d417b713391c923fcff22fc7ee9a8fd986a41) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 6/22/25 9:10 PM
+New sym int int0 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 < CONST_1 -> true
+
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0 < CONST_1
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 >= CONST_1 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0 >= CONST_1
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int0 <= CONST_100 &&
+int0 >= CONST_1 -> true
+
+### PCs: total:3 sat:3 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int0 <= CONST_100 &&
+int0 >= CONST_1
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int0 > CONST_100 &&
+int0 >= CONST_1 -> true
+
+### PCs: total:4 sat:4 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int0 > CONST_100 &&
+int0 >= CONST_1
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int0 > CONST_100 &&
+int0 >= CONST_1 -> true
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int0[101] > CONST_100 &&
+int0[101] >= CONST_1
+Using solver: ProblemZ3
+Exception in parsing or solving with solver ProblemZ3: ## Error Z3 
+
+java.lang.RuntimeException: ## Error Z3 
+
+	at gov.nasa.jpf.symbc.numeric.solvers.ProblemZ3.shiftL(ProblemZ3.java:1016)
+	at gov.nasa.jpf.symbc.numeric.PCParser.getExpression(PCParser.java:222)
+	at gov.nasa.jpf.symbc.numeric.PCParser.createDPLinearIntegerConstraint(PCParser.java:746)
+	at gov.nasa.jpf.symbc.numeric.PCParser.addConstraint(PCParser.java:1107)
+	at gov.nasa.jpf.symbc.numeric.PCParser.parse(PCParser.java:1091)
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.isSatisfiable(SymbolicConstraintsGeneral.java:133)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplifyOld(PathCondition.java:393)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplify(PathCondition.java:340)
+	at gov.nasa.jpf.symbc.bytecode.LCMP.execute(LCMP.java:98)
+	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
+	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
+	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
+	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
+	at gov.nasa.jpf.search.Search.forward(Search.java:937)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+Using solver: ProblemChoco
+java.lang.RuntimeException: Error: no solver could parse or solve the path condition: constraint # = 3
+(CONST_1<<int0) < CONST_1 &&
+int0 <= CONST_100 &&
+int0 >= CONST_1
+
+	at gov.nasa.jpf.symbc.numeric.SymbolicConstraintsGeneral.isSatisfiable(SymbolicConstraintsGeneral.java:151)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplifyOld(PathCondition.java:393)
+	at gov.nasa.jpf.symbc.numeric.PathCondition.simplify(PathCondition.java:340)
+	at gov.nasa.jpf.symbc.bytecode.LCMP.execute(LCMP.java:98)
+	at gov.nasa.jpf.vm.ThreadInfo.executeInstruction(ThreadInfo.java:1908)
+	at gov.nasa.jpf.vm.ThreadInfo.executeTransition(ThreadInfo.java:1859)
+	at gov.nasa.jpf.vm.SystemState.executeNextTransition(SystemState.java:765)
+	at gov.nasa.jpf.vm.VM.forward(VM.java:1722)
+	at gov.nasa.jpf.search.Search.forward(Search.java:937)
+	at gov.nasa.jpf.search.DFSearch.search(DFSearch.java:79)
+	at gov.nasa.jpf.JPF.run(JPF.java:613)
+	at gov.nasa.jpf.JPF.start(JPF.java:189)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at gov.nasa.jpf.tool.Run.call(Run.java:80)
+	at gov.nasa.jpf.tool.RunJPF.main(RunJPF.java:116)
+UNKNOWN
