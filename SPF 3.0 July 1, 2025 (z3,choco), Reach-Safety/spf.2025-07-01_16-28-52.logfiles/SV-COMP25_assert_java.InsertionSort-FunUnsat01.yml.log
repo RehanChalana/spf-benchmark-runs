@@ -1,0 +1,3159 @@
+./jpf-sv-comp --propertyfile ../../sv-benchmarks/java/properties/assert_java.prp ../../sv-benchmarks/java/common ../../sv-benchmarks/java/algorithms/InsertionSort-FunUnsat01
+
+
+--------------------------------------------------------------------------------
+
+
+/tmp/jpf-benchmark.L3oenY/config.jpf
+LD_LIBRARY_PATH=/home/rc22/code/gsoc/bench-defs/bin/spf-DKwdYeYUXb/jpf-symbc/lib::/home/rc22/code/softwares/cvc3-2.4.1-optimized-dynamic/lib:/home/rc22/code/softwares/yices-2.6.5/lib:/home/rc22/code/softwares/cvc3-2.4.1-optimized-dynamic/lib:/home/rc22/code/softwares/yices-2.6.5/lib
+Running Symbolic PathFinder ...
+symbolic.dp=[z3, choco]
+symbolic.string_dp_timeout_ms=3000
+symbolic.string_dp_alpha=A-Z
+symbolic.string_dp_alphaSize=26
+symbolic.string_dp_upper=10
+symbolic.string_dp_lower=1
+symbolic.string_dp=none
+symbolic.choco_time_bound=30000
+symbolic.max_pc_length=2147483647
+symbolic.max_pc_msec=0
+symbolic.bvlength=64
+symbolic.min_int=-2147483648
+symbolic.min_long=-9223372036854775808
+symbolic.min_short=-32768
+symbolic.min_byte=-128
+symbolic.min_char=0
+symbolic.max_int=2147483647
+symbolic.max_long=9223372036854775807
+symbolic.max_short=32767
+symbolic.max_byte=127
+symbolic.max_char=65535
+symbolic.min_double=4.9E-324
+symbolic.max_double=1.7976931348623157E308
+JavaPathfinder core system v8.0 (rev e36b693c0ac488866acf0ace956489b0f0720391) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+Main.main()
+
+====================================================== search started: 7/1/25 4:56 PM
+New sym int int0 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 <= CONST_0 -> true
+
+### PCs: total:1 sat:1 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0 <= CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 1
+int0 > CONST_0 -> true
+
+### PCs: total:2 sat:2 unsat:0
+
+string analysis: SPC # = 0
+NPC constraint # = 1
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int0 < CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:3 sat:2 unsat:1
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 2
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:4 sat:3 unsat:1
+
+string analysis: SPC # = 0
+NPC constraint # = 2
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3_length min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 >= int0 &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:5 sat:3 unsat:2
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 < int0 &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:6 sat:4 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 4
+CONST_0 < int0 &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int int1 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 5
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:7 sat:5 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 5
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:8 sat:6 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 7
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:9 sat:7 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 7
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int int2 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 9
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:10 sat:8 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 9
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 11
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:11 sat:9 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 11
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 11
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:12 sat:10 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 11
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int int3 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 13
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:13 sat:11 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 13
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:14 sat:12 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 15
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:15 sat:13 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 15
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int int4 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:16 sat:14 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 17
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:17 sat:15 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 19
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:18 sat:16 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 19
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int int5 min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 21
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:19 sat:17 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 21
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 23
+CONST_5 >= int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:20 sat:18 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 23
+CONST_5 >= int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 23
+CONST_5 < int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:21 sat:19 unsat:2
+
+string analysis: SPC # = 0
+NPC constraint # = 23
+CONST_5 < int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int int6 min=-2147483648, max=2147483647
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:61)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 24
+CONST_1 >= [I@1d3_length &&
+CONST_5 >= int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:22 sat:19 unsat:3
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 23
+CONST_5 >= int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:23 sat:20 unsat:3
+
+string analysis: SPC # = 0
+NPC constraint # = 23
+CONST_5 >= int0 &&
+[I@1d3!4[CONST_4] <- int5 == [I@1d3!5 &&
+CONST_4 >= CONST_0 &&
+CONST_4 < [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:44)
+	at Main.main(Main.java:64)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+CONST_4 >= [I@1d3_length &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:24 sat:20 unsat:4
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+CONST_4 < CONST_0 &&
+CONST_4 < int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:25 sat:20 unsat:5
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+CONST_1 >= [I@1d3_length &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:26 sat:20 unsat:6
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:27 sat:21 unsat:6
+
+string analysis: SPC # = 0
+NPC constraint # = 19
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!5[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:28 sat:22 unsat:6
+
+string analysis: SPC # = 0
+NPC constraint # = 19
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:29 sat:23 unsat:6
+
+string analysis: SPC # = 0
+NPC constraint # = 20
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 22
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:30 sat:24 unsat:6
+
+string analysis: SPC # = 0
+NPC constraint # = 22
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 22
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:31 sat:25 unsat:6
+
+string analysis: SPC # = 0
+NPC constraint # = 22
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:47)
+	at Main.main(Main.java:64)
+
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 21
+CONST_0 >= [I@1d3_length &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:32 sat:25 unsat:7
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:47)
+	at Main.main(Main.java:64)
+
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 21
+CONST_0 < CONST_0 &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:33 sat:25 unsat:8
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:47)
+	at Main.main(Main.java:64)
+
+New sym int [I@1d3!5[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+CONST_1 >= [I@1d3_length &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:34 sat:25 unsat:9
+
+New sym int [I@1d3!5[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+CONST_1 < CONST_0 &&
+CONST_4 >= int0 &&
+[I@1d3!3[CONST_3] <- int4 == [I@1d3!4 &&
+CONST_3 >= CONST_0 &&
+CONST_3 < [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:35 sat:25 unsat:10
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_3 >= [I@1d3_length &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:36 sat:25 unsat:11
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_3 < CONST_0 &&
+CONST_3 < int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:37 sat:25 unsat:12
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_1 >= [I@1d3_length &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:38 sat:25 unsat:13
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:39 sat:26 unsat:13
+
+string analysis: SPC # = 0
+NPC constraint # = 15
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!5[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:40 sat:27 unsat:13
+
+string analysis: SPC # = 0
+NPC constraint # = 15
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:41 sat:28 unsat:13
+
+string analysis: SPC # = 0
+NPC constraint # = 16
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:42 sat:29 unsat:13
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:43 sat:30 unsat:13
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:44 sat:31 unsat:13
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:48)
+	at Main.main(Main.java:64)
+
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_0 >= [I@1d3_length &&
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:45 sat:31 unsat:14
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:48)
+	at Main.main(Main.java:64)
+
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_0 < CONST_0 &&
+[I@1d3!5[0] > [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:46 sat:31 unsat:15
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:48)
+	at Main.main(Main.java:64)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:47 sat:32 unsat:15
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 20
+CONST_2 >= [I@1d3_length &&
+[I@1d3!5[CONST_1] <- [I@1d3!5[1] == [I@1d3!6 &&
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:48 sat:32 unsat:16
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+[I@1d3!5[CONST_1] <- [I@1d3!5[1] == [I@1d3!6 &&
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:49 sat:33 unsat:16
+
+string analysis: SPC # = 0
+NPC constraint # = 19
+[I@1d3!5[CONST_1] <- [I@1d3!5[1] == [I@1d3!6 &&
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:44)
+	at Main.main(Main.java:64)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_1 >= [I@1d3_length &&
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:50 sat:33 unsat:17
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:42)
+	at Main.main(Main.java:64)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 19
+CONST_1 < CONST_0 &&
+[I@1d3!5[0] <= [I@1d3!5[1] &&
+[I@1d3!5[CONST_0] == [I@1d3!5[0] &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:51 sat:33 unsat:18
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:42)
+	at Main.main(Main.java:64)
+
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_0 >= [I@1d3_length &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:52 sat:33 unsat:19
+
+New sym int [I@1d3!5[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_0 < CONST_0 &&
+[I@1d3!5[CONST_1] == [I@1d3!5[1] &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:53 sat:33 unsat:20
+
+New sym int [I@1d3!5[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_1 >= [I@1d3_length &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:54 sat:33 unsat:21
+
+New sym int [I@1d3!5[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_1 < CONST_0 &&
+CONST_3 >= int0 &&
+[I@1d3!2[CONST_2] <- int3 == [I@1d3!3 &&
+CONST_2 >= CONST_0 &&
+CONST_2 < [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:55 sat:33 unsat:22
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 12
+CONST_2 >= [I@1d3_length &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:56 sat:33 unsat:23
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 12
+CONST_2 < CONST_0 &&
+CONST_2 < int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:57 sat:33 unsat:24
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 12
+CONST_1 >= [I@1d3_length &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:58 sat:33 unsat:25
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 11
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:59 sat:34 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 11
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!6[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 11
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:60 sat:35 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 11
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!6[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 12
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:61 sat:36 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 12
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 14
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:62 sat:37 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 14
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 14
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:63 sat:38 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 14
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!6[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 14
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:64 sat:39 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 14
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:65 sat:40 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 15
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:66 sat:41 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 16
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+CONST_2 >= [I@1d3_length &&
+[I@1d3!7[CONST_0] <- [I@1d3!6[1] == [I@1d3!8 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:67 sat:42 unsat:25
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+CONST_2 >= [I@1d3_length &&
+[I@1d3!7[CONST_0] <- [I@1d3!6[1] == [I@1d3!8 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+CONST_2 < [I@1d3_length &&
+[I@1d3!7[CONST_0] <- [I@1d3!6[1] == [I@1d3!8 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:68 sat:42 unsat:26
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+int0 < CONST_2 &&
+[I@1d3!7[CONST_0] <- [I@1d3!6[1] == [I@1d3!8 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:69 sat:42 unsat:27
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+int0 >= CONST_2 &&
+[I@1d3!7[CONST_0] <- [I@1d3!6[1] == [I@1d3!8 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:70 sat:43 unsat:27
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+int0 >= CONST_2 &&
+[I@1d3!7[CONST_0] <- [I@1d3!6[1] == [I@1d3!8 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:65)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_0 >= [I@1d3_length &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:71 sat:43 unsat:28
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:42)
+	at Main.main(Main.java:64)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_0 < CONST_0 &&
+[I@1d3!6[CONST_1] <- [I@1d3!6[0] == [I@1d3!7 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:72 sat:43 unsat:29
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.sort(Main.java:42)
+	at Main.main(Main.java:64)
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_1 >= [I@1d3_length &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:73 sat:43 unsat:30
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_1 < CONST_0 &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:74 sat:43 unsat:31
+
+New sym int [I@1d3!6[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_0 >= [I@1d3_length &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:75 sat:43 unsat:32
+
+New sym int [I@1d3!6[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_0 < CONST_0 &&
+[I@1d3!6[0] > [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:76 sat:43 unsat:33
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 14
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:77 sat:44 unsat:33
+
+string analysis: SPC # = 0
+NPC constraint # = 14
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_2 >= [I@1d3_length &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:78 sat:45 unsat:33
+
+string analysis: SPC # = 0
+NPC constraint # = 16
+CONST_2 >= [I@1d3_length &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_2 < [I@1d3_length &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:79 sat:45 unsat:34
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+int0 < CONST_2 &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:80 sat:45 unsat:35
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+int0 >= CONST_2 &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:81 sat:46 unsat:35
+
+string analysis: SPC # = 0
+NPC constraint # = 16
+int0 >= CONST_2 &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!9[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:82 sat:47 unsat:35
+
+string analysis: SPC # = 0
+NPC constraint # = 15
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+New sym int [I@1d3!9[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:83 sat:48 unsat:35
+
+string analysis: SPC # = 0
+NPC constraint # = 16
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+[I@1d3!9[0] < [I@1d3!9[1] &&
+[I@1d3!9[CONST_1] == [I@1d3!9[1] &&
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:84 sat:49 unsat:35
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+[I@1d3!9[0] < [I@1d3!9[1] &&
+[I@1d3!9[CONST_1] == [I@1d3!9[1] &&
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 18
+[I@1d3!9[0] >= [I@1d3!9[1] &&
+[I@1d3!9[CONST_1] == [I@1d3!9[1] &&
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:85 sat:50 unsat:35
+
+string analysis: SPC # = 0
+NPC constraint # = 18
+[I@1d3!9[0] >= [I@1d3!9[1] &&
+[I@1d3!9[CONST_1] == [I@1d3!9[1] &&
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:65)
+
+New sym int [I@1d3!9[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_1 >= [I@1d3_length &&
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:86 sat:50 unsat:36
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:65)
+
+New sym int [I@1d3!9[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 17
+CONST_1 < CONST_0 &&
+[I@1d3!9[CONST_0] == [I@1d3!9[0] &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:87 sat:50 unsat:37
+
+
+====================================================== search constraint
+depth limit reached: 13
+
+====================================================== snapshot 
+thread java.lang.Thread:{id:0,name:main,status:RUNNING,priority:5,isDaemon:false,lockCount:0,suspendCount:0}
+  call stack:
+	at Main.main(Main.java:65)
+
+New sym int [I@1d3!9[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_0 >= [I@1d3_length &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:88 sat:50 unsat:38
+
+New sym int [I@1d3!9[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 16
+CONST_0 < CONST_0 &&
+[I@1d3!8[CONST_1] <- [I@1d3!6[1] == [I@1d3!9 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:89 sat:50 unsat:39
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_1 >= [I@1d3_length &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:90 sat:50 unsat:40
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 15
+CONST_1 < CONST_0 &&
+[I@1d3!6[0] <= [I@1d3!6[1] &&
+[I@1d3!6[CONST_0] == [I@1d3!6[0] &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:91 sat:50 unsat:41
+
+New sym int [I@1d3!6[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 13
+CONST_0 >= [I@1d3_length &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:92 sat:50 unsat:42
+
+New sym int [I@1d3!6[0] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 13
+CONST_0 < CONST_0 &&
+[I@1d3!6[CONST_1] == [I@1d3!6[1] &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:93 sat:50 unsat:43
+
+New sym int [I@1d3!6[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 12
+CONST_1 >= [I@1d3_length &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:94 sat:50 unsat:44
+
+New sym int [I@1d3!6[1] min=-2147483648, max=2147483647
+Using solver: ProblemZ3
+numeric PC: constraint # = 12
+CONST_1 < CONST_0 &&
+CONST_2 >= int0 &&
+[I@1d3!1[CONST_1] <- int2 == [I@1d3!2 &&
+CONST_1 >= CONST_0 &&
+CONST_1 < [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:95 sat:50 unsat:45
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_1 >= [I@1d3_length &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:96 sat:50 unsat:46
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_1 < CONST_0 &&
+CONST_1 < int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:97 sat:50 unsat:47
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_1 >= [I@1d3_length &&
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:98 sat:51 unsat:47
+
+string analysis: SPC # = 0
+NPC constraint # = 8
+CONST_1 >= [I@1d3_length &&
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+CONST_1 < [I@1d3_length &&
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:99 sat:51 unsat:48
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+int0 < CONST_2 &&
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> true
+
+### PCs: total:100 sat:52 unsat:48
+
+string analysis: SPC # = 0
+NPC constraint # = 8
+int0 < CONST_2 &&
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0
+Using solver: ProblemZ3
+numeric PC: constraint # = 8
+int0 >= CONST_2 &&
+CONST_1 >= int0 &&
+[I@1d3[CONST_0] <- int1 == [I@1d3!1 &&
+CONST_0 >= CONST_0 &&
+CONST_0 < [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:101 sat:52 unsat:49
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 >= [I@1d3_length &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:102 sat:52 unsat:50
+
+Using solver: ProblemZ3
+numeric PC: constraint # = 4
+CONST_0 < CONST_0 &&
+[I@1d3_length == int0 &&
+int0 >= CONST_0 &&
+int0 > CONST_0 -> false
+
+### PCs: total:103 sat:52 unsat:51
+
+
+====================================================== results
+no errors detected
+
+====================================================== statistics
+elapsed time:       00:00:00
+states:             new=76,visited=0,backtracked=76,end=1
+search:             maxDepth=13,constraints=17
+choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=28
+heap:               new=494,released=42,maxLive=459,gcCycles=31
+instructions:       6833
+max memory:         232MB
+loaded code:        classes=86,methods=1929
+
+====================================================== search finished: 7/1/25 4:56 PM
+SAFE
